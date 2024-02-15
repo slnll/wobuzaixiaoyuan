@@ -15,13 +15,13 @@ on:
           - "False"
 
 jobs:
-  CheckScores:
+    wbzxys:
     # 在最新版的Ubuntu系统上运行
     runs-on: ubuntu-latest
 
     steps:
       # 使用GitHub Actions提供的动作来检出代码库
-      - name: Checkout Repository
+      - name: Wobuzaixiaoyuan
         uses: actions/checkout@main
 
       # 配置Python环境
