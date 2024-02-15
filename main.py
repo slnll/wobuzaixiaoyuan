@@ -14,9 +14,13 @@ from base64 import b64encode
 import os
 
 username = os.environ.get("USERNAME")
+username=str(username)
 password = os.environ.get("PASSWORD")
+password=str(password)
+print(username)
+print(password)
 token = os.environ.get("TOKEN")
-key = (str(username) + "0000000000000000")[:16]
+key = (username + "0000000000000000")[:16]
 logging.captureWarnings(True)
 session = requests.session()
 
@@ -43,8 +47,10 @@ headers0 = {"accept": "aplication/json,text/plain,*/*",
             "user-agent": "Mozilla/5.0 (Linux; Android 10; LIO-AN00 Build/HUAWEILIO-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.3396.87 XWEB/1170 MMWEBSDK/200201 Mobile Safari/537.36 MMWEBID/3371 MicroMessenger/7.0.12.1620(0x27000C36) Process/toolsmp NetType/4G Language/zh_CN ABI/arm64"
             }
 reaponse0 = session.post(url0, params=params0, headers=headers0, verify=False)
+print(reaponse0.text)
 url1 = "https://gw.wozaixiaoyuan.com/sign/mobile/receive/getMySignLogs"
 res0 = session.get(url=url1, headers=headers0, verify=False).json()
+print(res0)
 type = res0["data"][0]["type"]
 
 id = res0["data"][0]["id"]
@@ -89,7 +95,7 @@ def send():
 
 
 
-if res0["data"][0]["type"] == 1:
+if res0["data"][0]["type"] != 1:
     a=sign()
     sign_info = (
         f"{signTitle}\n"
