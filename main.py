@@ -7,17 +7,17 @@ by Slin
 import logging
 import requests
 import json
-import os
 logging.captureWarnings(True)
 session = requests.session()
-print(os.environ.get('lin'))
+
 username='19854062326'
 password='5211314666'
+schoolid=1
 key = (username + "0000000000000000")[:16]
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from base64 import b64encode
-proxies = { "http": "http://127.0.0.1:9099", "https": "http://127.0.0.1:9099", }
+#proxies = { "http": "http://127.0.0.1:9099", "https": "http://127.0.0.1:9099", }
 def encrypt(t, e):
     key = e.encode('utf-8')
     cipher = AES.new(key, AES.MODE_ECB)
@@ -38,9 +38,9 @@ data0={}
 headers0={"accept":"aplication/json,text/plain,*/*",
           "user-agent":"Mozilla/5.0 (Linux; Android 10; LIO-AN00 Build/HUAWEILIO-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.3396.87 XWEB/1170 MMWEBSDK/200201 Mobile Safari/537.36 MMWEBID/3371 MicroMessenger/7.0.12.1620(0x27000C36) Process/toolsmp NetType/4G Language/zh_CN ABI/arm64"
           }
-reaponse0=session.post(url0,params=params0,proxies=proxies,headers=headers0,verify=False)
+reaponse0=session.post(url0,params=params0,headers=headers0,verify=False)
 url1="https://gw.wozaixiaoyuan.com/sign/mobile/receive/getMySignLogs"
-res0=session.get(url=url1,proxies=proxies,headers=headers0,verify=False).json()
+res0=session.get(url=url1,headers=headers0,verify=False).json()
 type=res0["data"][0]["type"]
 a=res0["data"][0]
 id=res0["data"][0]["id"]
@@ -62,5 +62,5 @@ data0={
 }
 print(data0)
 url2="https://gw.wozaixiaoyuan.com/sign/mobile/receive/doSignByLocation"
-res1=session.post(url2,params=params1,data=json.dumps(data0),proxies=proxies,headers=headers0,verify=False)
+res1=session.post(url2,params=params1,data=json.dumps(data0),headers=headers0,verify=False)
 print(res1.text)
