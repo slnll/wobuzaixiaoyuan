@@ -9,7 +9,7 @@ import requests
 import json
 logging.captureWarnings(True)
 session = requests.session()
-
+from pushplus import send_message
 username='19854062326'
 password='5211314666'
 key = (username + "0000000000000000")[:16]
@@ -53,9 +53,11 @@ params1={
 
 }
 print(params1)
+area="{{\"id\":\"{}\",\"name\":\"西安邮电大学长安校区\"}}".format(id)
+print(area)
 data0={
     "inArea": 1,
-    "areaJSON":"{\"id\":\"664212671557669112\",\"name\":\"西安邮电大学\"}",
+    "areaJSON":area,
     "latitude": 34.149944390190974,
     "longitude": 108.90250108506945
 }
@@ -63,3 +65,16 @@ print(data0)
 url2="https://gw.wozaixiaoyuan.com/sign/mobile/receive/doSignByLocation"
 res1=session.post(url2,params=params1,data=json.dumps(data0),headers=headers0,verify=False)
 print(res1.text)
+def sign():
+    sign_info={
+        "signTitle": signTitle,
+        "signContext":signContext,
+    }
+    token="59d07464d6d44485ae4e7b306e0ff23c"
+    send_message(
+        token,
+        "我在校园自动签到",
+        sign_info,
+    )
+
+sign()
