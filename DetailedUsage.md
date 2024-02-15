@@ -62,7 +62,7 @@
 ## 6. 查看运行结果
 
 当你的页面类似下图所示时则表示程序正常运行且未报错
-<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/15.png?raw=true" style="zoom:60%;" />
+<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/13.png?raw=true" style="zoom:60%;" />
 <img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/14.png?raw=true" style="zoom:60%;" />
 在此之后，程序将会每隔 30 分钟自动运行一次
 
