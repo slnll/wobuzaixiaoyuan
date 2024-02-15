@@ -2,7 +2,7 @@
 
 
 
-## 简介![0](C:\Users\Administrator\Documents\GitHub\wobuzaixiaoyuan\img\0.png)
+## 简介![0](https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/0.png)
 
 **使用本项目前：**
 
@@ -12,13 +12,15 @@
 
 自动检测是否有签到，如果有将自动签到，并将结果告知你（目前能力有限，只有微信的通知）
 
+
+
 ## 测试环境
 
 我在校园小程序 版本 V2.3.9
 
 嗯，就是下面的
 
-![1](C:\Users\Administrator\Documents\GitHub\wobuzaixiaoyuan\img\1.jpg)
+![1](https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/1.jpg)
 
 ## 目前支持的功能
 
