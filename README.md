@@ -2,7 +2,8 @@
 
 
 
-## 简介![0](https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/0.png)
+## 简介
+<img src="https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/0.png" style="zoom:60%;" />
 
 **使用本项目前：**
 
@@ -20,7 +21,9 @@
 
 嗯，就是下面的
 
-![1](https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/1.jpg)
+<img src="https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/1.jpg" style="zoom:60%;" />
+
+
 
 ## 目前支持的功能
 
