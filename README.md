@@ -55,7 +55,6 @@
 
 | Name     | 例子         | 说明                                                         |
 | -------- | ------------ | ------------------------------------------------------------ |
-|          |              |                                                              |
 | USERNAME | 1008610086   | 我在校园账号（手机号）                                       |
 | PASSWORD | I love study | 我在校园密码                                                 |
 | TOKEN    | piannide     | [Pushplus 的 token](https://www.pushplus.plus/doc/guide/openApi.html#_1-%E8%8E%B7%E5%8F%96token "Pushplus 的 token") |
