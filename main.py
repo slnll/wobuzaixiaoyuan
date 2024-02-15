@@ -30,7 +30,7 @@ def encrypt(t, e):
     return b64encode(encrypted_text).decode('utf-8')
 
 
-encrypted_text = encrypt(password, key)
+encrypted_text = encrypt(str(password), key)
 print("加密密码:", encrypted_text)
 
 url0 = "https://gw.wozaixiaoyuan.com/basicinfo/mobile/login/username"
