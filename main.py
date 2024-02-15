@@ -17,8 +17,7 @@ username = os.environ.get("USERNAME")
 username=str(username)
 password = os.environ.get("PASSWORD")
 password=str(password)
-print(username)
-print(password)
+
 token = os.environ.get("TOKEN")
 key = (username + "0000000000000000")[:16]
 logging.captureWarnings(True)
