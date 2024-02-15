@@ -13,14 +13,15 @@
 
 ## 3. 添加 Secrets
 
+
+
 > Name = Name，Secret = 例子
 
-| Name     | 例子                       | 说明              |
-| -------- | -------------------------- | ----------------- |
-| URL      | https://www.nianbroken.top | 教务系统地址      |
-| USERNAME | 2971802058                 | 教务系统用户名    |
-| PASSWORD | Y3xhaCkb5PZ4               | 教务系统密码      |
-| TOKEN    | J65KWMBfyDh3YPLpcvm8       | Pushplus 的 token |
+| Name     | 例子         | 说明                                                         |
+| -------- | ------------ | ------------------------------------------------------------ |
+| USERNAME | 1008610086   | 我在校园账号（手机号）                                       |
+| PASSWORD | I love study | 我在校园密码                                                 |
+| TOKEN    | piannide     | [Pushplus 的 token](https://www.pushplus.plus/doc/guide/openApi.html#_1-%E8%8E%B7%E5%8F%96token "Pushplus 的 token") |
 
 <img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/06.png?raw=true" style="zoom:60%;" />
 <img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/07.png?raw=true" style="zoom:60%;" />
