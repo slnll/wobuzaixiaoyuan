@@ -41,7 +41,37 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
 
+      # 添加上游仓库作为远程仓库，并获取上游仓库的main分支的最新更改
+      - name: Fetch upstream changes
+        run: |
+          git remote add upstream https://github.com/slnll/wobuzaixiaoyuan.git
+          git fetch upstream main
 
+      # 创建一个备份目录，并将当前目录中的所有.txt文件复制到备份目录
+      - name: Backup local .txt files
+        run: |
+          mkdir -p backup
+          cp -r *.txt backup/ || echo "No .txt files to backup"
+
+      # 将上游main分支的更改强制推送到当前main分支
+      - name: Force push changes from upstream to current main branch
+        run: |
+          git checkout main
+          git reset --hard upstream/main
+          git push origin main --force || (for i in {1..10}; do
+          echo "------" &&
+          echo "你需要手动同步上游分支" &&
+          echo "同步方法如下：" &&
+          echo "1. 打开你的仓库首页：https://github.com/${{ github.repository }}" &&
+          echo "2. 点击 Sync fork"&&
+          echo "3. 点击 Update branch 或 Discard xxx commits";
+          done; exit 1)
+
+      # 从备份目录将.txt文件还原到当前目录，然后删除备份目录
+      - name: Restore local .txt files and delete backup
+        run: |
+          cp -r backup/*.txt . || echo "No .txt files to restore"
+          rm -rf backup
       # 运行主程序main.py
       - name: Run main.py
 
