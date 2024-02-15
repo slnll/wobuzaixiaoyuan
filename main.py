@@ -89,7 +89,7 @@ def send():
 
 
 
-if res0["data"][0]["type"] != 1:
+if res0["data"][0]["type"] == 1:
     a=sign()
     sign_info = (
         f"{signTitle}\n"
