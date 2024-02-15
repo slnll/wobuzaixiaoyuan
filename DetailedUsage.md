@@ -69,4 +69,4 @@
 ## 7. 成绩更新通知
 
 当检测到成绩更新时，你的页面应该是类似下图所示
-<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/154.png?raw=true" style="zoom:60%;" />
+<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/15.png?raw=true" style="zoom:60%;" />
