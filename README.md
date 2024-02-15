@@ -3,7 +3,7 @@
 
 
 ## 简介
-<img src="https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/0.png" style="zoom:60%;" />
+<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/0.png?raw=true" style="zoom:60%;" />
 
 **使用本项目前：**
 
@@ -21,7 +21,7 @@
 
 嗯，就是下面的
 
-<img src="https://github.com/slnll/wobuzaixiaoyuan/tree/main/img/1.jpg" style="zoom:60%;" />
+<img src="https://github.com/slnll/wobuzaixiaoyuan/blob/main/img/1.jpg?raw=true" style="zoom:60%;" />
 
 
 
