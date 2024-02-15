@@ -16,7 +16,7 @@ import os
 username = os.environ.get("USERNAME")
 password = os.environ.get("PASSWORD")
 token = os.environ.get("TOKEN")
-key = (username + "0000000000000000")[:16]
+key = (str(username) + "0000000000000000")[:16]
 logging.captureWarnings(True)
 session = requests.session()
 
