@@ -12,7 +12,6 @@ session = requests.session()
 
 username='19854062326'
 password='5211314666'
-schoolid=1
 key = (username + "0000000000000000")[:16]
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
@@ -30,7 +29,7 @@ print("加密密码:", encrypted_text)
 
 url0="https://gw.wozaixiaoyuan.com/basicinfo/mobile/login/username"
 params0={
-    "schoolID":schoolid,
+    "schoolID":1,
     "password":encrypted_text,
     "username":username
 }
