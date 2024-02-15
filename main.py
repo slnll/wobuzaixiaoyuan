@@ -11,9 +11,11 @@ from pushplus import send_message
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from base64 import b64encode
+import os
 
-username = '19854062326'
-password = '5211314666'
+username = os.environ.get("USERNAME")
+password = os.environ.get("PASSWORD")
+token = os.environ.get("TOKEN")
 key = (username + "0000000000000000")[:16]
 logging.captureWarnings(True)
 session = requests.session()
@@ -82,7 +84,7 @@ def send():
     )
 
 
-token = "59d07464d6d44485ae4e7b306e0ff23c"
+
 
 
 
