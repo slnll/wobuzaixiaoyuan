@@ -33,7 +33,7 @@ jobs:
       # 使用pip安装项目的依赖项
       - name: Install dependencies
         run: |
-          pip install requests 
+          pip install requests AES 
 
       # 配置Git用户信息
       - name: Configure Git
