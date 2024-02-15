@@ -48,7 +48,7 @@ signTitle=res0["data"][0]["signTitle"]
 signContext=res0["data"][0]["signContext"]
 params1={
     "id": id,
-    "schoolId":schoolid,
+    "schoolId":1,
     "signId":signId,
 
 }
