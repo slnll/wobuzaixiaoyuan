@@ -12,7 +12,16 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from base64 import b64encode
 import os
+import random
+import hashlib
+random_int = random.randint(1, 100)
+random_float = random.random()
 
+# 将浮点数转换为字节字符串
+float_bytes = str(random_float).encode()
+
+# 计算 MD5 值
+md5_hash = hashlib.md5(float_bytes).hexdigest()
 username = os.environ.get("USERNAME")
 username=str(username)
 password = os.environ.get("PASSWORD")
@@ -49,7 +58,7 @@ reaponse0 = session.post(url0, params=params0, headers=headers0, verify=False)
 print(reaponse0.text)
 url1 = "https://gw.wozaixiaoyuan.com/sign/mobile/receive/getMySignLogs"
 res0 = session.get(url=url1, headers=headers0, verify=False).json()
-print(res0)
+print(res0["data"][0])
 type = res0["data"][0]["type"]
 
 id = res0["data"][0]["id"]
@@ -87,6 +96,7 @@ def send():
         "我在校园签到推送",
         sign_info
     )
+    return response_text
 
 
 
@@ -104,5 +114,9 @@ if res0["data"][0]["type"] != 1:
         f"{createName}\n"
         f"------\n"
         f"{a}\n"
+        f"------\n"
+        f"MD5校验值：{md5_hash}"
+
     )
-    send()
+    b=send()
+    print(b)
